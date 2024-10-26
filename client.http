@@ -1,0 +1,51 @@
+### Variables
+@baseUrl = http://localhost:3000
+@token = {{session.response.body.access_token}}
+### 
+
+###################################################################
+##########              Account Routes                     #######
+###################################################################
+
+# @name Register 
+POST {{baseUrl}}/account/register
+Content-Type: application/json
+
+{
+    "name": "test",
+    "email": "test@gmail.com",
+    "password": "123456"
+}
+
+###
+
+# @name session 
+POST {{baseUrl}}/account/session
+Content-Type: application/json
+
+{
+    "email": "test@gmail.com",
+    "password": "123456"
+}
+
+###
+
+###################################################################
+##########              Question Routes                     #######
+###################################################################
+
+# @name create_question
+POST {{baseUrl}}/question/create
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+    "title": "new Question",
+    "content": "content of question"
+}
+
+###
+
+# @name get_recent_questions
+GET {{baseUrl}}/question/get-recent?page=1
+Authorization: Bearer {{token}}
