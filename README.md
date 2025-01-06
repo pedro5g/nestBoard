@@ -39,8 +39,8 @@ Make sure you have the following installed:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/project-name.git
-   cd project-name
+   git clone https://github.com/pedro5g/nestBoard.git
+   cd nestBoard
    ```
 
 ### TO DO
